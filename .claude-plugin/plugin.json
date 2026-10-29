@@ -1,7 +1,7 @@
 {
   "name": "crewser",
   "version": "0.21.0",
-  "description": "Run several Claude Code sessions as crews: usage bars, named and coloured sessions, pings, tasks with strategies (roles, models, advisors, a window per session), several crews at once in their own git worktrees, an overseer above their leads, and every crew as a pixel-art town in /crew-town.",
+  "description": "Run several Claude Code sessions as one crew: roles, models and strategies, pings between sessions, an overseer for several crews, and a pixel-art town to watch them work.",
   "author": {
     "name": "Mads Vejen Langkilde"
   },
