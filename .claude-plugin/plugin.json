@@ -1,0 +1,160 @@
+{
+  "name": "crewser",
+  "version": "0.21.0",
+  "description": "Run several Claude Code sessions as crews: usage bars, named and coloured sessions, pings, tasks with strategies (roles, models, advisors, a window per session), several crews at once in their own git worktrees, an overseer above their leads, and every crew as a pixel-art town in /crew-town.",
+  "author": {
+    "name": "Mads Vejen Langkilde"
+  },
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "showBand": {
+      "type": "boolean",
+      "title": "Show the usage bars",
+      "description": "Draw the context and usage-limit bars.",
+      "default": true
+    },
+    "barsPosition": {
+      "type": "string",
+      "title": "Bars position",
+      "description": "below = under the prompt, on the hint line; above = in the band above the prompt.",
+      "options": [
+        "below",
+        "above"
+      ],
+      "default": "below"
+    },
+    "showContext": {
+      "type": "boolean",
+      "title": "Context bar",
+      "description": "Show the context-window fill bar.",
+      "default": true
+    },
+    "showSessionLimit": {
+      "type": "boolean",
+      "title": "5-hour limit bar",
+      "description": "Show the 5-hour (session) usage limit bar.",
+      "default": true
+    },
+    "showWeeklyLimit": {
+      "type": "boolean",
+      "title": "Weekly limit bar",
+      "description": "Show the 7-day usage limit bar.",
+      "default": true
+    },
+    "showCost": {
+      "type": "boolean",
+      "title": "Cost",
+      "description": "Show this session's cost in USD.",
+      "default": false
+    },
+    "barStyle": {
+      "type": "string",
+      "title": "Bar style",
+      "description": "How the bars are drawn.",
+      "options": [
+        "blocks",
+        "shades",
+        "line",
+        "dots",
+        "squares",
+        "ascii"
+      ],
+      "default": "blocks"
+    },
+    "barWidth": {
+      "type": "number",
+      "title": "Bar width",
+      "description": "Cells per bar (4-40).",
+      "default": 12
+    },
+    "barColors": {
+      "type": "string",
+      "title": "Bar colors",
+      "description": "traffic = green/yellow/red by fill, session = this session's color, mono = theme text.",
+      "options": [
+        "traffic",
+        "session",
+        "mono"
+      ],
+      "default": "traffic"
+    },
+    "autoName": {
+      "type": "boolean",
+      "title": "Apply name and color",
+      "description": "When a session starts or joins a task, run /rename with its name and /color with its color.",
+      "default": true
+    },
+    "colorTarget": {
+      "type": "string",
+      "title": "Session color goes to",
+      "description": "prompt = Claude's prompt bar via /color (8 colors), background = tint the terminal (Terminal.app background, iTerm2 tab), both, or none.",
+      "options": [
+        "prompt",
+        "background",
+        "both",
+        "none"
+      ],
+      "default": "prompt"
+    },
+    "tintStrength": {
+      "type": "number",
+      "title": "Tint strength",
+      "description": "How strongly the background is tinted, in percent (0-60).",
+      "default": 14
+    },
+    "flashOnPing": {
+      "type": "boolean",
+      "title": "Flash background on ping",
+      "description": "Pulse the terminal background while a ping waits, even when the session color goes to the prompt bar.",
+      "default": true
+    },
+    "macNotify": {
+      "type": "boolean",
+      "title": "macOS notifications",
+      "description": "Post a macOS notification when a ping arrives while the window is not focused.",
+      "default": true
+    },
+    "autoKickoff": {
+      "type": "boolean",
+      "title": "Auto kickoff on join",
+      "description": "After joining a task, start a turn that introduces this session to the team.",
+      "default": true
+    },
+    "strategiesFolder": {
+      "type": "string",
+      "title": "Strategies folder",
+      "description": "Where strategies are saved. Empty = in the project, in .crewser/strategies (committed and shared with the code). Or a folder on this machine, e.g. ~/crewser/strategies.",
+      "default": ""
+    },
+    "townFolder": {
+      "type": "string",
+      "title": "Town folder",
+      "description": "Where the town's buildings are saved. Empty = in the project, in .crewser/town (committed and merged with the code). Or a folder on this machine, e.g. ~/crewser/towns (a folder per project inside it).",
+      "default": ""
+    },
+    "autoOpen": {
+      "type": "boolean",
+      "title": "Town: Open the town at start",
+      "description": "Open the town pane when a session starts (it seats once the terminal is wide enough).",
+      "default": false
+    },
+    "fps": {
+      "type": "number",
+      "title": "Town: Frames per second",
+      "description": "Animation speed of the town (1-15).",
+      "default": 10
+    },
+    "boredAfter": {
+      "type": "number",
+      "title": "Town: Bored after (seconds)",
+      "description": "When every member idles and you have been away this long, the crew starts waving for work.",
+      "default": 120
+    },
+    "height": {
+      "type": "number",
+      "title": "Town: Height",
+      "description": "Rows the town asks for when it sits above the prompt (14-60).",
+      "default": 34
+    }
+  }
+}

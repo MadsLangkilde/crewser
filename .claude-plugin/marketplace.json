@@ -1,0 +1,13 @@
+{
+  "name": "crewser",
+  "owner": {
+    "name": "Mads Vejen Langkilde"
+  },
+  "plugins": [
+    {
+      "name": "crewser",
+      "source": "./",
+      "description": "Run several Claude Code sessions as a crew: usage bars, named and coloured sessions, pings, tasks with strategies (roles, models, advisors, a window per session), and the crew as a pixel-art town in /crew-town."
+    }
+  ]
+}
