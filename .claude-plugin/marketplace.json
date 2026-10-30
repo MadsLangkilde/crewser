@@ -7,7 +7,7 @@
     {
       "name": "crewser",
       "source": "./",
-      "description": "Run several Claude Code sessions as one crew: roles, models and strategies, pings between sessions, an overseer for several crews, and a pixel-art town to watch them work."
+      "description": "Run several Claude Code sessions as a team: strategies, messages between sessions, an overseer across crews, and resumable tasks."
     }
   ]
 }
